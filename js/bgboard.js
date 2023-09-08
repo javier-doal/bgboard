@@ -168,7 +168,7 @@ function BgBoard(options) {
 		= (BgBoard.BASE_CONTAINER_HEIGHT * options.scale) + 'px';
 
 	var boardImage = new Image;
-	boardImage.src = this.options.filesRoot + 'img/empty_board.jpg';
+	boardImage.src = this.options.filesRoot + 'img/empty_board_v.jpg';
 	boardImage.style.width = this.container.style.width;
 	boardImage.style.height = this.container.style.height;
 	boardImage.className = 'bgboard_empty_board';
@@ -753,7 +753,7 @@ BgBoard.BASE_OVERFLOW_INDICATOR_SIZE = 18;
 BgBoard.POINT_CAPACITY = 5;
 
 BgBoard.CHECKER_IMAGE_URLS = 
-	['/checkers/red_checker.png', '/checkers/white_checker.png'];
+	['/checkers/black_checker.png', '/checkers/white_checker.png'];
 
 BgBoard.DOUBLE_OR_ROLL_DECISION = 'DOUBLE_OR_ROLL_DECISION';
 BgBoard.TAKE_OR_DROP_DECISION = 'TAKE_OR_DROP_DECISION';
@@ -761,4 +761,13 @@ BgBoard.TAKE_OR_DROP_DECISION = 'TAKE_OR_DROP_DECISION';
 return BgBoard;
 
 })();
-
+/**
+* @param String name
+* @return String
+*/
+function getParameterByName(name) {
+     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
