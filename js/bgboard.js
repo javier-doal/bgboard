@@ -168,7 +168,7 @@ function BgBoard(options) {
 		= (BgBoard.BASE_CONTAINER_HEIGHT * options.scale) + 'px';
 
 	var boardImage = new Image;
-	boardImage.src = this.options.filesRoot + 'img/empty_board_v.jpg';
+	boardImage.src = this.options.filesRoot + 'img/empty_board_v22.jpg';
 	boardImage.style.width = this.container.style.width;
 	boardImage.style.height = this.container.style.height;
 	boardImage.className = 'bgboard_empty_board';
